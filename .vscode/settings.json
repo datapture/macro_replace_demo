@@ -1,0 +1,9 @@
+{
+    "rust-analyzer.linkedProjects": [
+        ".\\examples\\macro_test\\Cargo.toml",
+        ".\\Cargo.toml",
+        ".\\crates\\mreplace\\Cargo.toml",
+        ".\\crates\\mreplace\\Cargo.toml",
+        ".\\Cargo.toml"
+    ]
+}

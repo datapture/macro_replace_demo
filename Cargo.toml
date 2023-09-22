@@ -1,0 +1,6 @@
+[workspace]
+
+members = [
+    "./crates/mreplace",
+    "./examples/macro_test",    
+]
