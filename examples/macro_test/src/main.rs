@@ -20,26 +20,22 @@ impl Mytype
     }
 }
 
-
-
-use mreplace::macro_replace;
+//use mreplace::macro_replace;
 
 fn main() {
     // let v0:i32 = 5;
-    // let value = macro_replace!({
-    //     let v1:Option<@keywork> = None;        
-    //     if v0 > @keywork::c1() {
-    //         v1 = Some(@keywork::new(v0));
+    // let value = macro_replace!({ {        
+    //     if v0 > 10 {
+    //         @keyword::new(v0)
     //     }
     //     else {
-    //         v1 = Some(@keywork::new(@keywork::c2()));
+    //         @keyword::new(@keyword::c2())
     //     }
-    //     v1
-    // }, Mytype);
+    // } }, {Mytype});
 
     let param1:f64 = 0.5;
     let param2:f64 = 10.7;
-    let value:f64 = macro_replace!({param2 + @keyword(param1) },{ f64::asin }); 
+    let value:f64 = mreplace::macro_replace!({param2 + @keyword(param1*param2) },{ f64::asin }); 
 
     println!("Hello, {}", value);
 }
